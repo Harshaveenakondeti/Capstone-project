@@ -1,5 +1,14 @@
-# Capstone-project -SpaceX-IBM Data Science
+# SpaceX Falcon9 Rocket launch first stage prediction
+## Applied Data Science Capstone Project
 
+### Summary
+Project is based on prediction of success of first stage of launch of Falcon 9 rocket by SpaceX. we can bid against SpaceX by using prediction and estimate the cost of launch.
+
+Here I collected data from SpaceX websites through REST APIs, stored in data frame. I sorted data by filtering the specified columns useful for prediction. Data Wrangling done by calculating missing values, changing categorical values to dummy labels and numerical values to float. Exploratory data analysis done by SQL Queries and found unique launch sites . EDA through visualization plotted graphs on different attributes to check relation. From plots we can say increasing payload will decrease the chance of launch success and success is vary from different launch sites, orbit types. Created KPI Dashboards for all launch sites success rate, and also depends on payload. with this dashboard we can say in between 2k-6k there are more launches have successful outcome. we created folium map and marked all launch sites on it, to identify are they near to coastal, railway, city, highway. launch sites are near to coastal. now we evaluated different classification models and find their best parameters ,accuracy and best model among it. Among Decision Tree, SVM, KNN, Logistic Regression model , logistic regression model is the best model with highest accuracy of 83%. 
+
+So we can predict Falcon 9 rocket launch first stage will be 83% successful. We can bid against SpaceX by estimating cost of launch .
+
+### Information about SpaceX
 In this capstone, we will predict if the Falcon 9 first stage will land successfully. SpaceX advertises Falcon 9 rocket launches on its website with a cost of 62 million dollars; other providers cost upward of 165 million dollars each, much of the savings is because SpaceX can reuse the first stage. Therefore if we can determine if the first stage will land, we can determine the cost of a launch. This information can be used if an alternate company wants to bid against SpaceX for a rocket launch.
 
 First we  will collect and make sure the data is in the correct format from an API. Here we collected data from core,launchsite,payload,apis and saved it to pandas dataframe. we taken required colums and group by falcon9 rocket. we check null values in data frame. we replace payloadmass null values with its mean values and saved it to csv as dataset1.csv format.we  performed web scraping to collect Falcon 9 historical launch records from a Wikipedia page titled List of Falcon 9 and Falcon Heavy launches
